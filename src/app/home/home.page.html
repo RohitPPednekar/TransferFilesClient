@@ -29,6 +29,10 @@
       <ion-label>Resources</ion-label>
     </ion-list-header>
     <!-- <ion-item href="https://ionicframework.com/docs/"> -->
+      <div class="modal-body">
+        <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+        <img id="preview" src="" alt="Preview">
+     </div>
       <ion-button expand="block">Share</ion-button>
     <!-- </ion-item> -->
     <ion-item href="https://ionicframework.com/docs/building/scaffolding">
