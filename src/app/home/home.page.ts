@@ -13,11 +13,7 @@ export class HomePage {
 
   constructor(public socket: Socket, public socketSharableEmit : SocketEmitFileService) {
 
-      this.socket.connect();
-
-      this.socket.on('connect', function() {
-        
-      });
+      
    
    }
 
@@ -30,6 +26,12 @@ export class HomePage {
 
   fileChangeEvent(file) {
    // debugger;
+
+   this.socket.connect();
+
+      this.socket.on('connect', function() {
+        
+      });
 
 
     for (var i = 0; i <= file.target.files.length - 1; i++) {
@@ -54,12 +56,13 @@ export class HomePage {
       data: null,
       slice : 0,
       arraySize : 0 ,
-      arrayCounterInit : 0
+      arrayCounterInit : 0,
+      reWriteFile : false
   }
 
     fileReader.readAsArrayBuffer(slice); 
     fileReader.onload = (evt) => {
-       // console.log(" fileReader !!!!!!!")
+        console.log(" fileReader !!!!!!!")
         
         debugger;
         fileDetailsShare.data = fileReader.result; 
@@ -91,7 +94,8 @@ export class HomePage {
               data: null,
               slice : 0,
               arraySize : 0,
-              arrayCounterInit : 0
+              arrayCounterInit : 0,
+              reWriteFile : false
             };
 
             reRequestfileDetailsShare = {
@@ -100,6 +104,7 @@ export class HomePage {
               size: 0, 
               data: null,
               slice : 0,
+              reWriteFile : true
             }
             this.socket.removeListener('request slice upload');
             this.socket.removeListener('end upload');
@@ -117,11 +122,12 @@ export class HomePage {
           size: this.fileList[0].size, 
           data: null, 
           slice :  0,
+          reWriteFile : true
         }
         
         
       this.socket.on('request slice upload', (data) => { 
-
+        debugger;
          // console.log("request slice upload !!!!!!!!!!!!")
           var fileReaderNew = new FileReader();
          // console.log("file.target.files[0].size------------------>"+ data.currentSlice)
@@ -198,3 +204,4 @@ export class HomePage {
   }
 
 }
+
