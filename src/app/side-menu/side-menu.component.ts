@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild  } from '@angular/core';
+import { Router, RouterEvent } from '@angular/router';
+
 
 @Component({
   selector: 'app-side-menu',
@@ -7,21 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor() { }
+  selectedPath = '';
+  constructor(private router: Router) { 
+    this.router.events.subscribe((event:RouterEvent)=>{
+      if(event && event.url){
+        this.selectedPath = event.url;
+      }
+    })
+    console.log("INSIDE SIDEMENUCOMPONENT !!!!!!!!!!!!!!!")
+  }
 
   public appPages = [
     {
       title: 'Home',
-      url: '/home',
+      url: '/auth/home',
       icon: 'home'
     },
     {
       title: 'List',
-      url: '/list',
+      url: '/auth/list',
       icon: 'list'
     }
   ];
 
+
+
+  private _opened: boolean = false;
+ 
+  _toggleSidebar() {
+    console.log("Toggle !")
+    this._opened = !this._opened;
+  }
+
   ngOnInit() {}
 
+
+ 
 }
+
+
