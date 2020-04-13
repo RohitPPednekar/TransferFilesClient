@@ -23,7 +23,7 @@ export class SideMenuComponent implements OnInit {
     {
       title: 'Home',
       url: '/auth/home',
-      icon: 'home'
+      icon: 'home-outline'
     },
     {
       title: 'List',

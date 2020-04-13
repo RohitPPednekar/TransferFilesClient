@@ -1,51 +1,54 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-  <ion-card class="welcome-card">
-    <img src="/assets/shapes.svg" alt=""/>
-    <ion-card-header>
-      <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Ionic</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>
-        Now that your app has been created, you'll want to start building out features
-        and components. Check out some of the resources below for next steps.
-      </p>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label>Resources</ion-label>
-    </ion-list-header>
+<ion-content  class="homePageBackground" fullscreen="true" >
+  
+  <ion-header translucent="true" no-border>
+    <ion-toolbar class="homePageToolbar">
+      <ion-buttons slot="start">
+        <ion-menu-button><img style="height : 25px;" src='../../assets/icon/white-menu-icons.png'></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="transfer_file_font" style="font-weight : 600;font-size: 22px;padding-left:1px;">
+        ShareQuick
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <!-- <ion-list lines="none"> -->
     <!-- <ion-item href="https://ionicframework.com/docs/"> -->
-      <div class="modal-body">
+      <!-- <div class="modal-body">
         <input type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
-        <img id="preview" src="" alt="Preview">
-     </div>
-      <ion-button expand="block">Share</ion-button>
+        
+     </div> -->
+      
     <!-- </ion-item> -->
-    <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-      <ion-icon slot="start" color="medium" name="build"></ion-icon>
-      <ion-label>Scaffold Out Your App</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/layout/structure">
-      <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-      <ion-label>Change Your App Layout</ion-label>
-    </ion-item>
-    <ion-item href="https://ionicframework.com/docs/theming/basics">
-      <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-      <ion-label>Theme Your App</ion-label>
-    </ion-item>
-  </ion-list>
+   
+  <!-- </ion-list> -->
+
+  <ion-row center>  
+    <ion-col text-center>   
+      <ion-button fill="outline" class="transfer_file_font actionBtn" shape="round" size="large">Send</ion-button>
+      <br><br>
+      <ion-button fill="outline" class="transfer_file_font actionBtnRec" shape="round" size="large">Recieve</ion-button>
+      <br>
+      <!-- <img class="animateImageRight" src='../../assets/design_assets/MainReadyLeft.png' float-right><br><br> -->
+    </ion-col> 
+   </ion-row>
+
+   <!-- <ion-row center>  
+    <ion-col text-center>   
+      <br> -->
+      
+      
+      
+    <!-- </ion-col> 
+   </ion-row> -->
+
+
+   
+
 </ion-content>
+   
+    <div class ="atBottom">
+      <img class="animateImageLeft" src='../../assets/design_assets/MainREADY.png' float-left>
+      <br><br>
+    </div>

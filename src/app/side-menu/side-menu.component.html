@@ -1,26 +1,25 @@
 <ion-split-pane contentId="main-content">
   <ion-menu contentId="main-content" type="overlay">
-    <ion-header>
-      <ion-toolbar>
-        <ion-buttons >
-          <ion-button class="wrapper">
-            <ion-thumbnail >
-              <img alt="logo" id="header_logo" src="assets/DSC_0023.JPG">      
-          </ion-thumbnail>
-          </ion-button>
-        </ion-buttons>
-        <ion-title>
-              Rohit Pednekar
-        </ion-title>
+    
+
+    <ion-header >
+      <ion-toolbar color="primary"  mode="ios">
+        <ion-thumbnail class="getCenter">
+          <img alt="logo"   id="header_logo" src="assets/DSC_0023.JPG"/>
+        </ion-thumbnail>
+          <ion-title class="getPositionText">
+              Add New Rest
+          </ion-title>
       </ion-toolbar>
-    </ion-header>
+  </ion-header>
+
     <ion-content>
       <ion-list>
         
         <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
           <ion-item [routerDirection]="'root'" [routerLink]="[p.url]" [class.active-item]="selectedPath.startsWith(p.url)">
-            <ion-icon slot="start" [name]="p.icon"></ion-icon>
-            <ion-label>
+            <ion-icon slot="start" size="small"  [name]="p.icon"></ion-icon>
+            <ion-label class="transfer_file_font">
               {{p.title}}
             </ion-label>
           </ion-item>

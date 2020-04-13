@@ -2,3 +2,42 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.actionBtn{
+    --border-color : #ffd300;
+    --border-width : 1;
+    --color : #fff;
+    margin-top : 120px;
+    width: 245px;
+    height : 63px;
+}
+
+.actionBtnRec{
+  --border-color : #ffd300;
+  --border-width : 1;
+  --color : #fff;
+  width: 245px;
+  height : 63px;
+}
+ 
+.animateImageLeft{
+  width: 260px;
+  height : auto;
+  border: none;
+  // margin-top : 160px;
+}
+
+
+.animateImageRight{
+  width: 125px;
+  height : auto;
+  border: none;
+  // margin-top : 160px;
+}
+
+.atBottom{
+  position: fixed;
+  left: 0;
+  bottom: 65px;
+  right: 0;
+}

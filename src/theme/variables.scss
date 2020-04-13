@@ -3,6 +3,27 @@
 
 /** Ionic CSS Variables **/
 :root {
+  .homePageBackground{
+    --background: url(../assets/design_assets/PcbTypeWallpaper.jpg) 0 0/100% 100% no-repeat;
+    --ion-text-color: #ffffff;
+}
+
+.homePageToolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
+  --ion-text-color: #ffffff;
+  z-index: 1000;
+  font-size: 1.2em;
+
+  }
+  
+  --ion-color-custom : linear-gradient(90deg, rgba(0,187,224,1) 0%, rgba(20,138,171,1) 52%);
+  --ion-color-custom-rgb: #fff !important;
+  --ion-color-custom-contrast: #ffffff !important;
+  --ion-color-custom-contrast-rgb: 255, 255, 255 !important;
+  --ion-color-custom-shade: #3171e0 !important;
+  --ion-color-custom-tint: #4c8dff !important;
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,8 +95,31 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+
+  
+@font-face {
+  font-family: 'Nanum Gothic', sans-serif;;
+  src: url('../assets/fonts/NanumGothic-Regular.ttf');
 }
 
+.transfer_file_font { 
+  font-family: "Nanum Gothic"; 
+  font-size:16px;
+  font-weight: 200;
+}
+
+
+.ion-color-custom {
+  --ion-color-base: var(--ion-color-custom);
+  --ion-color-base-rgb: var(--ion-color-custom-rgb);
+  --ion-color-contrast: var(--ion-color-custom-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-custom-contrast-rgb);
+  --ion-color-shade: var(--ion-color-custom-shade);
+  --ion-color-tint: var(--ion-color-custom-tint);
+}
+
+}
 
 
 
@@ -86,6 +130,14 @@
    */
 
   body {
+
+    --ion-color-custom : linear-gradient(90deg, rgba(0,187,224,1) 0%, rgba(20,138,171,1) 52%);
+  --ion-color-custom-rgb: 56, 128, 255;
+  --ion-color-custom-contrast: #ffffff;
+  --ion-color-custom-contrast-rgb: 255, 255, 255;
+  --ion-color-custom-shade: #3171e0;
+  --ion-color-custom-tint: #4c8dff;
+
     --ion-color-primary: #428cff;
     --ion-color-primary-rgb: 66,140,255;
     --ion-color-primary-contrast: #ffffff;
