@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>files-explorer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- {{DirList}}
+  <div *ngFor="let lists of DirList">
+    <p> {{ lists.name}}  {{ lists.path}} {{ lists.size}}</p>
+</div> -->
+
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom" style="width: 100%; overflow-y: auto; overflow-x: auto;">
+
+    <ion-tab-button tab="registrieren">
+      <ion-icon name="person-add"></ion-icon>
+      <ion-label>Registrieren</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="aufnahme">
+      <ion-icon name="add-circle"></ion-icon>
+      <ion-label>Aufnahme</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="entfernen">
+      <ion-icon name="remove-circle"></ion-icon>
+      <ion-label>Entfernen</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="standortwechsel">
+      <ion-icon name="md-car"></ion-icon>
+      <ion-label>Übergabe</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="admin-bestand">
+      <ion-icon name="ios-albums"></ion-icon>
+      <ion-label>Bestand</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="system">
+      <ion-icon name="settings"></ion-icon>
+      <ion-label>System</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+<ion-tabs>
+  <ion-tab-bar slot="top" style="width: 100%; overflow-y: auto; overflow-x: auto;">
+
+    <ion-tab-button tab="file">
+      <ion-icon name="md-document-text-outline"></ion-icon>
+      <ion-label>File</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="apk">
+      <ion-icon name="md-android-outline"></ion-icon>
+      <ion-label>APK</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="photos">
+      <ion-icon name="md-image-outline"></ion-icon>
+      <ion-label>Photos</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="video">
+      <ion-icon name="md-videocam-outline"></ion-icon>
+      <ion-label>Video</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="audio">
+      <ion-icon name="md-musical-notes-outline"></ion-icon>
+      <ion-label>Audio</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+
+
+<!-- <ion-tabs>
+  <ion-tab-bar class = "mainHeader" slot="top" style="width: 100%; overflow-y: auto; overflow-x: auto;">
+
+    <ion-tab-button *ngFor="let item of fileHeader" tab="{{item.name}}">
+      <ion-icon name="{{item.icon}}"></ion-icon>
+      <ion-label>{{item.label}}</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs> -->
+
+</ion-content>

@@ -27,7 +27,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3002', options: {} };
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
   ],
   bootstrap: [AppComponent]
 })

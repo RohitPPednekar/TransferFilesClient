@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SideMenuComponent } from './side-menu.component';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { File } from '@ionic-native/file/ngx';
+import { FileTransfer } from '@ionic-native/file-transfer/ngx';
+import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
 
 @NgModule({
   declarations: [SideMenuComponent],
@@ -26,6 +28,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
             ]
           },
     ])
-  ]
+  ],
+  providers: [
+    File,
+    FileTransfer,
+    AndroidPermissions
+  ],
 })
 export class SideMenuModule { }
